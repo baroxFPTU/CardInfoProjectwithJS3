@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+$blue: hsl(205, 78%, 60%);
+$blueLight: #f0f5f8;
+$blueDark: #082643;
+$gray: #5b7a99;
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.transition {
+  transition: all 0.25s ease-in-out;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $blueLight;
+}
+
+.container {
+  border-radius: 15px;
+  width: 80vw;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  .title h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    color: $blueDark;
+    padding-bottom: 10px;
+    margin-bottom: 60px;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+      width: 75px;
+      height: 5px;
+      background: $blue;
+    }
+  }
+}
+
+.card {
+  background-color: #fff;
+  padding: 25px 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: -1px 2px 12px 0px #d7d7d7;
+  &_avt {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  &_avt-img {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50rem;
+    box-shadow: 7px -3px 0 0 $blue;
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+  &_quote {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    background-color: $blue;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+  }
+  &_name {
+    font-size: 16px;
+    letter-spacing: 0.25rem;
+    text-transform: capitalize;
+    margin-bottom: 3px;
+    color: $blueDark;
+  }
+  &_role {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: $blue;
+    margin-bottom: 10px;
+  }
+  &_desc {
+    font-size: 15px;
+    text-align: center;
+    color: $gray;
+    margin-bottom: 15px;
+  }
+}
+
+.btn-container {
+  display: flex;
+  button {
+    padding: 10px;
+    font-size: 20px;
+    color: $blue;
+    opacity: 0.6;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.btn {
+  padding: 5px 10px;
+  background-color: hsl(205, 100%, 96%);
+  border: 3px solid $blue;
+  border-radius: 10px;
+  text-transform: capitalize;
+  color: hsl(205, 78%, 60%);
+  cursor: pointer;
+  &:hover {
+    background-color: $blue;
+    color: #333;
+  }
+}
